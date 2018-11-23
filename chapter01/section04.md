@@ -165,3 +165,5 @@ oDiv.html(tDiv.html());
 	</body>
 </html>
 ```
+效果如下：
+![](../images/chapter01/002.png)
