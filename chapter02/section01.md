@@ -87,3 +87,67 @@
 首先通过ID获取表格元素，然后遍历表格的各行，根据行号的奇偶性，动态设置行的背景色，从而实现隔行变色的效果。
 
 页面中的JavaScript代码虽可以实现最终效果，但循环页面的元素会影响打开速度，并且代码较为复杂，如使用jQuery选择器实现上述页面效果，则需要在页面中加一些代码。
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用jQuery选择器实现隔行变色</title>
+		<style type="text/css">
+			body {
+				font-size: 12px);
+				text-align: center;
+			}
+			#tbStu {
+				width: 260px;
+				border: 1px solid #666;
+				background-color: #eee;
+			}
+			
+			#tbStu tr {
+				line-height: 23px;
+			}
+			
+			#tbStu tr th {
+				background-color: #ccc;
+				color: #fff;
+			}
+			
+			#tbStu .trOdd {
+				background-color: #FFFFFF;
+			}
+		</style>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function  () {
+				$("#tbStu tr:nth-child(even").addClass("trOdd");
+			})
+		</script>
+	</head>
+	<body>
+		<table id="tbStu" cellspacing="" cellpadding="">
+			<tbody>
+				<tr>
+					<th>学号</th>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>总分</th>
+				</tr>
+				
+				<tr>
+					<td>1001</td>
+					<td>张小明</td>
+					<td>男</td>
+					<td>320</td>
+				</tr>
+				<tr>
+					<td>1002</td>
+					<td>李明琪</td>
+					<td>女</td>
+					<td>350</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
+```
