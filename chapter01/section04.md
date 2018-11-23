@@ -28,3 +28,6 @@ oDiv.html(tDiv.html());
 ```
 
 ### jQuery控制DOM对象
+
+在介绍使用jQuery控制DOM对象前，先通过一个简单的示例，说明如何用传统的JavaScript方法访问DOM对象
+
