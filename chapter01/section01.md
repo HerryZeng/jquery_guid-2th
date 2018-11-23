@@ -38,6 +38,34 @@ jQuery的官方网站为:http://jquery.com。
 <script language="javascript" type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 ```
 
+### 编写一个简单的jQuery程序
 
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第一个简单的jQuery程序</title>
+		<style type="text/css">
+			div {
+				padding: 8px 0;
+				font-size: 12px;
+				text-align: center;
+				border: 1px solid #888;
+			}
+		</style>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("div").html("你好，欢迎来到jQuery的精彩世界");
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div></div>
+	</body>
+</html>
+```
 
 
