@@ -8,4 +8,5 @@
   * [第四节：jQuery简单应用](chapter01/section04.md)
 * [第二章：jQuery选择器](chapter02.md)
   * [第一节：选择器的优势](chapter02/section01.md)
+  * [第二节：jQuery选择器的类型](chapter02/section02.md)
 
