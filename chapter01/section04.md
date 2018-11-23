@@ -167,3 +167,51 @@ oDiv.html(tDiv.html());
 ```
 效果如下：
 ![](../images/chapter01/002.png)
+
+### jQuery控制页面CSS
+
+jQuery框架中通过自带Javascript编程，提供全部CSS3下的选择器，开发者可以首先定义自己的样式文件，然后通过jQuery中的`addClass()`方法，将该样式轻松地添加到页面中指定的元素中，而不用考虑浏览器的兼容性。
+
+下面通过一个简单的示例介绍如何使用jQuery中的`toggleClass(className)`方法实现样式动态切换功能。
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery控制CSS样式<br /></title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<style type="text/css">
+			.iframe {
+				border: 1px solid #888888;
+				font-size: 14px;
+			}
+			
+			.defcol {
+				padding: 8px;
+				background-color: #EEEEEE;
+			}
+			
+			.curcol {
+				padding: 8px;
+				background-color: #CCCCCC;
+				color: #EEEEEE;	
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(function() {
+				$(".defcol").click(function () {
+					$(this).toggleClass("curcol");
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="iframe">
+			<div class="defcol">标题</div>
+		</div>
+	</body>
+</html>
+```
