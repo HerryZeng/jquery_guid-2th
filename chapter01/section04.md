@@ -31,3 +31,137 @@ oDiv.html(tDiv.html());
 
 在介绍使用jQuery控制DOM对象前，先通过一个简单的示例，说明如何用传统的JavaScript方法访问DOM对象
 
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript控制DOM对象</title>
+		<style type="text/css">
+			.iframe {
+				border: 1px solid #888888;
+				font-size: 14px;
+			}
+			.title{
+				padding: 6px;
+				background-color: #EEEEEE;
+			}
+			.content{
+				padding: 8px;
+				font-size: 12px;
+			}
+			.tip {
+				background-color: #EEEEEE;
+				display: none;
+				font-size: 12px;
+				padding: 8px;
+			}
+			.txt {
+				border: 1px solid #888888;
+			}
+			.btn {
+				border: 1px solid #888888;
+				width: 60px;
+			}
+			.w260 {
+				width: 260px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			function btn_Click () {
+				var oTxtValue = document.getElementById("Text1").value;
+				var oRdoValue = (Radio1.checked)?"男":"女";
+				var oChkValue = (Checkbox1.checked)?"已婚":"未婚";
+				
+				document.getElementById("Tip").style.display = "block";
+				document.getElementById("Tip").innerHTML=oTxtValue+"<br/>"+oRdoValue+"<br/>"+oChkValue;
+			};
+		</script>
+	</head>
+	<body>
+		<div class="iframe">
+			<div class="title">请输入如下信息</div>
+			<div class="content">
+				姓名：<input type="text" id="Text1" class="txt"/><br />
+				性别：<input type="radio" id="Radio1" name="rdoSex" value="男" />男
+					<input type="radio" name="rdoSex" id="Radio2" value="女" />女 <br />
+					
+				婚否：<input type="checkbox" id="Checkbox1" /> <br /><br />
+					<input type="button" id="btnSubmit" value="提交" class="btn" onclick="btn_Click()"/><br /><br />
+			</div>
+			<div class="tip" id="Tip"></div>
+		</div>
+	</body>
+</html>
+```
+以上代码使用传统的JavaScript方法获取用户输入的信息，并保存到变量中，最后通过`document.getElementById("Tip").innerHTML`方法显示所有的数据信息。
+
+在引入jQuery库，通过jQuery中的方法获取元素的值，并将获取的数据显示出来。其修改后的JavaScript代码如下：
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript控制DOM对象</title>
+		<style type="text/css">
+			.iframe {
+				border: 1px solid #888888;
+				font-size: 14px;
+			}
+			.title{
+				padding: 6px;
+				background-color: #EEEEEE;
+			}
+			.content{
+				padding: 8px;
+				font-size: 12px;
+			}
+			.tip {
+				background-color: #EEEEEE;
+				display: none;
+				font-size: 12px;
+				padding: 8px;
+			}
+			.txt {
+				border: 1px solid #888888;
+			}
+			.btn {
+				border: 1px solid #888888;
+				width: 60px;
+			}
+			.w260 {
+				width: 260px;
+			}
+		</style>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$("#btnSubmit").click(function() {
+					var oTxtValue = $("#Text1").val();
+					var oRdoValue = $("#Radio1").is(":checked")?"男":"女";
+					var oChkValue = $("#Checkbox1").is(":checked")?"已婚":"未婚";
+					
+					$("#Tip").css("display","block").html(oTxtValue+"<br/>"+oRdoValue+"<br/>"+oChkValue);
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<div class="iframe">
+			<div class="title">请输入如下信息</div>
+			<div class="content">
+				姓名：<input type="text" id="Text1" class="txt"/><br />
+				性别：<input type="radio" id="Radio1" name="rdoSex" value="男" />男
+					<input type="radio" name="rdoSex" id="Radio2" value="女" />女 <br />
+					
+				婚否：<input type="checkbox" id="Checkbox1" /> <br /><br />
+					<input type="button" id="btnSubmit" value="提交" class="btn"/>
+					<br />
+					<br />
+			</div>
+			<div class="tip" id="Tip"></div>
+		</div>
+	</body>
+</html>
+```
