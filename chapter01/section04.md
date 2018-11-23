@@ -4,3 +4,27 @@
 
 ### jQuery访问DOM对象
 
+1. 什么是DOM对象
+每一个页面都是一个DOM(Document Object Model，文本对象模型)对象，通过传统的JavaScript方法访问页面中的元素，就是访问DOM对象。
+如，页面中有两个`div`元素标记如下
+```html
+<div id="Tmp">测试魔王</div>
+<div id="Out"></div>
+```
+通过下面的JavaScript代码可以访问DOM对象，以及获取或设置其内容值 ：
+```javascript
+var tDiv = document.getElementById("Tmp");    //获取DOM对象
+var oDiv = document.getElementById("Out");    //获取DOM对象
+var cDiv = tDiv.innerHTML;                    //获取DOM对象中的内容
+var oDiv.innerHTML = cDiv;                    //设置DOM对象中的内容
+```
+
+2. 什么是jQuery对象
+在jQuery库中，通过本身自带的方法获取页面元素的对象，称为jQuery对象，为了同样实现在ID为"Out"的标记中显示ID为"Tmp"的标记内容，采用jQuery访问页面元素的方法如下：
+```jquery
+var tDiv = $("#Tmp");
+var oDiv = $("#Out");
+oDiv.html(tDiv.html());
+```
+
+### jQuery控制DOM对象
