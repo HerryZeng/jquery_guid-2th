@@ -42,5 +42,6 @@ jQuery的官方网站为:http://jquery.com。
 	</body>
 </html>
 ```
-
+页面效果如下图
+![](../images/chapter01/001.png)
 
