@@ -1,3 +1,5 @@
-# My Awesome Book
+jQuery发布于2006年，因为其易于使用、功能强大、展现优雅、兼容性极佳等特点而迅速赢得了Web开发者的青睐。在此期间，jQuery吸引着全球开发者社区的技术爱好者，精英 和专家们加入其阵营，这使得它在众多的AJAX框架中脱颖而出，几近成为Web开发领域的事实标准。
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+附着Web开发技术的发展，以及用户对应用体验的要日益提高，致使我们开发一个Web应用时，不仅仅考虑其功能是否足够完备，更重要的是考虑如何才能提高用户体验。这是理性的回归，也是Web开发技术发展的必然趋势，而jQuery恰恰是满足这一理性需求的利刃。
+
+虽然jQuery使用简单，但它毕竟是一门新的技术，与传统的JavaScript在性能与语法上存在诸多差异，需要相应的书籍来引导开发者们迅速而有效地掌握它，并能真正付诸实践。为了让所有还没有完全掌握jQuery技术的开发者能迅速步入jQuery的殿堂，于是本书诞生了，相信它不会让你失望。
