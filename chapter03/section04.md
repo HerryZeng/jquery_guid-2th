@@ -10,7 +10,7 @@ css(name,value)
 ```
 其中`name`为样式名称，`value`为样式的值 
 
-**增加元素CSS类别**
+### **增加元素CSS类别**
 
 通过`addClass()`方法增加元素类别的名称，其语法格式如下:
 ```jquery
