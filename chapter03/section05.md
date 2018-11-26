@@ -15,3 +15,19 @@ var $div = $("<div title'jQuery理念'>Write Less Do More</div>");$("body").appe
 ```
 执行上述代码后，将在页面文档body中创建一个div标记，其内容为"Write Less Do More"，属性title的值为"jQuery理念"。
 
+
+### 内部插入节点
+
+在页面中动态创建元素需要执行节点的插入或追加操作。而在jQuery中，有多种方法可以实现该功能，`append()`方法仅是其中之一。按照插入元素的顺序来分，可以分为内部和外部两种方法。下面将分别对这些方法进行详细介绍。
+
+内部插入节点的方法如下表：
+
+|语法格式|参数说明|功能描述|
+|---|---|---|
+|`append(content)`|`content`表示追加到目标中的内容|向所选择的元素内部插入内容|
+|`append(function(index,html))`|通过`function`函数返回追加到目标中的内容|向所选择的元素内部插入`function`函数所返回的内容|
+|`appendTo(content)`|`content`表示被追加的内容|把所选择的元素追加到另一个指定的元素集合中|
+|`prepend(content)`|`content`表示插入到目标元素前面的内容|向所选择的元素前面插入内容|
+|`prepend(function(index,html))`|通过`function`函数返回插入到目标前面的内容|向所选择的元素前面插入`function`函数所返回的内容|
+|`prependTo(content)`|`content`表示被插入的内容|把所选择的元素插入到另一个指定的元素集合中|
+
