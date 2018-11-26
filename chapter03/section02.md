@@ -112,3 +112,15 @@ attr({key0:value0,key1:value1})
 attr(key,function(index))
 '```
 其中，参数`index`为当前元素的索引号，整个函数返回一个字符串作为元素的属性值。
+
+
+### 删除元素的属性
+
+jQuery在通过`attr()`方法设置元素的属性后，使用`removeAttr()`方法呆以将元素的属性删除，其使用的语法如下；
+```jquery
+removeAttr(name)
+```
+其中，参数`name`为元素属性的名称。
+
+
+
