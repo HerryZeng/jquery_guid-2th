@@ -12,4 +12,5 @@
   * [第三节：综合安全分析-导航条在项目中的应用](chapter02/section03.md)
 * [第三章：jQuery操作DOM](chapter03.md)
   * [第一节：DOM树状模型](chapter03/section01.md)
+  * [第二节：元素属性操作](chapter03/section02.md)
 
