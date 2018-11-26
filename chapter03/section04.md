@@ -53,7 +53,7 @@ toggleClass(class)
 </html>
 ```
 
-**删除元素CSS类别**
+### **删除元素CSS类别**
 
 与增加类别的`addClass()`方法相对应，`removeClass()`方法则用于删除类别，其语法如下：
 ```jquery
