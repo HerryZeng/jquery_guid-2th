@@ -106,3 +106,9 @@ attr({key0:value0,key1:value1})
 	</body>
 </html>
 ```
+
+`attr()`方法还可以绑定一个`function()`函数，通过该函数返回的值 作为元素的属性值，其语法格式如下：
+```jquery
+attr(key,function(index))
+'```
+其中，参数`index`为当前元素的索引号，整个函数返回一个字符串作为元素的属性值。
