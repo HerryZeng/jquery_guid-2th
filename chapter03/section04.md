@@ -21,7 +21,7 @@ addClass(class)
 addClass(class0 class1...)
 ```
 
-**切换元素CSS类别**
+### **切换元素CSS类别**
 通过`toggleClass()`方法切换不同的元素类别，其语法如下：
 ```jquery
 toggleClass(class)
