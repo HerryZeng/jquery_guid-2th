@@ -14,4 +14,5 @@
   * [第一节：DOM树状模型](chapter03/section01.md)
   * [第二节：元素属性操作](chapter03/section02.md)
   * [第三节：获取和设置元素](chapter03/section03.md)
+  * [第四节：元素样式操作](chapter03/section04.md)
 
