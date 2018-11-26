@@ -31,3 +31,24 @@ var $div = $("<div title'jQuery理念'>Write Less Do More</div>");$("body").appe
 |`prepend(function(index,html))`|通过`function`函数返回插入到目标前面的内容|向所选择的元素前面插入`function`函数所返回的内容|
 |`prependTo(content)`|`content`表示被插入的内容|把所选择的元素插入到另一个指定的元素集合中|
 
+### 外部插入节点
+
+外部插入节点的方法如下表：
+
+|语法格式|参数说明|功能描述|
+|---|---|---|
+|`after(content)`|`content`表示插入目标元素外部后面的内容|向所选择的元素外部后面插入内容|
+|`after(function)`|通过`function`函数返回值插入目标外部后面的内容|向所选择的元素外部后面插入`function`函数所返回的内容|
+|`before(content)`|`content`表示插入元素外部前面的内容|向所选择的元素外部前面插入内容|
+|`before(function)`|通过`function`函数返回值插入目标外部前面的内容|向所选择的元素外部前面插入`function`函数所返回的内容|
+|`insertAfter(content)`|`content`表示插入目标元素外部后面的内容|将所选择的元素插入另一个指定的元素外部后面|
+|`insertBefore(content)`|`content`表示插入目标元素外部前面的内容|将所选择的元素插入另一个指定的元素外部前面|
+
+
+### 复制元素节点
+
+在页面中，有时需要将某个元素节点复制到另外一个节点，在jQuery中，可以通过方法`clone()`轻松实现，该方法的语法格式为：
+```jquery
+clone()
+```
+
