@@ -66,5 +66,43 @@ attr({key0:value0,key1:value1})
 
 示例如下：
 ```html
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>设置元素的属性</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {
+				font-size: 12px;
+			}
+			
+			.clsSpn{
+				float: left;
+				padding-top: 10px;
+				padding-left: 10px;
+			}
+			
+			.clsImg {
+				border: 1px solid #CCCCCC;
+				padding: 3px;
+				float: left;
+				width: 500px;
+				height: 500px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function  () {
+				$("img").attr("src","img/img01.jpg")
+				$("img").attr("title","这是一幅风景画")
+				$("img").addClass("clsImg")
+				$("span").html('加载完毕')
+			})
+		</script>
+	</head>
+	<body>
+		<img style="float: left;"/>
+		<span class="clsSpn">正在加载图片...</span>
+	</body>
+</html>
 ```
