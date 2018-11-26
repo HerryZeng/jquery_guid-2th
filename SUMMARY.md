@@ -15,4 +15,5 @@
   * [第二节：元素属性操作](chapter03/section02.md)
   * [第三节：获取和设置元素](chapter03/section03.md)
   * [第四节：元素样式操作](chapter03/section04.md)
+  * [第五节：页面元素操作](chapter03/section05.md)
 
