@@ -27,3 +27,60 @@ val(val)
 ```jquery
 val().join(",")
 ```
+示例如下：
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取或设置元素的值</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {font-size: 12px; text-align: center;}
+			div {padding: 3px; margin: 3px; width: 120px;float: left;}
+			.txt {
+				border: 1px solid #666666;
+				padding: 3px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(function  () {
+				$("select").change(function() {
+					var strSel = $("select").val().join(",");
+					$("#p1").html(strSel);
+				})
+				
+				$("input").change(function() {
+					var strTxt = $(this).val();
+					$("#p2").html(strTxt);
+				})
+				
+				$("input").focus(function() {
+					$("input").val("");
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<div>
+			<select multiple="multiple" style="height: 96px;width: 85px;">
+				<option value="1">Item 1</option>
+				<option value="2">Item 2</option>
+				<option value="3">Item 3</option>
+				<option value="4">Item 4</option>
+				<option value="5">Item 5</option>
+				<option value="6">Item 6</option>
+				<option value="7">Item 7</option>
+			</select>
+			<p id="p1"></p>
+		</div>
+		
+		<div >
+			<input type="text" class="txt" />
+			<p id="p2"></p>
+		</div>
+	</body>
+</html>
+```
