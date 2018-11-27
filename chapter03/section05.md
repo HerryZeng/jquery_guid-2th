@@ -142,5 +142,29 @@ replaceAll(selector)
 
 上表中，`wrap(html)`和`wrapInner(html)`方法比较常用，前者包裹外部元素，后者包裹元素内部的文本字符 。
 
-
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>包裹元素节点</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {font-size: 14px;}
+			p {background-color: #EEEEEE;padding: 5px; width: 200px;}
+		</style>
+		
+		<script type="text/javascript">
+			$(function () {
+				$("p").wrap("<b></b>");
+				$("span").wrapInner("<i></i>")
+			})
+		</script>
+	</head>
+	<body>
+		<p>最喜爱的体育运行：<span>羽毛球</span></p>
+		<p>最爱看哪类型图书：<span>网络、技术</span></p>
+	</body>
+</html>
+```
 
