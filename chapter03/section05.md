@@ -94,4 +94,38 @@ replaceWith(content)
 replaceAll(selector)
 ```
 该方法的功能是将所有选择的元素替换成指定`selector`的元素，其中参数`selector`为需要被替换的元素。
+示例如下：
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>替换元素节点</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {font-size: 14px;}
+			span {font-weight: bold;}
+			p {background-color: #EEEEEE;padding: 5px; width: 200px;}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+				$("#span1").replaceWith("<span title='replaceWith'>隐国蓉</span>");
+				$("<span title='replaceWith'>abc@163.com</span>").replaceAll("#span2");
+			})
+		</script>
+	</head>
+	<body>
+		<p>姓名：<sapn id="span1"></sapn></p>
+		<p>邮箱：<sapn id="span2"></sapn></p>
+	</body>
+</html>
+```
+`replaceWith()`和`replaceAll()`方法都可以实现元素节点的替换，二者最在的区别在于替换字符的顺序，前者是用括号中的字符替换所选择的元素；后者是用字符串替换括号中所选择的无比。一旦完成替换，被替换元素中的全部事件都将消失。
+
+
+### 包裹元素节点
+
+在jQuery中，不仅可以通过方法替换元素节点，还可以根据需注包裹某个指定的节点，对节点的包裹也是DOM对象操作中很重要的一项，其与包裹节点相关的全部方法如下表：
+
+
 
