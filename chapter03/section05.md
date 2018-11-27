@@ -51,4 +51,10 @@ var $div = $("<div title'jQuery理念'>Write Less Do More</div>");$("body").appe
 ```jquery
 clone()
 ```
+其功能为复制匹配的DOM元素并且选中复制成功的元素。该方法仅是复制元素本身，被复制后的新元素不具有任何元素作为。如果需要在复制时将元素的全部行为也进行复制，可以通过方法`clone(true)`实现，其格式为：
+```jquery
+clone(true)
+```
+其中的参数设置为`true`，就可以复制元素的所有事件处理。
+
 
