@@ -56,5 +56,42 @@ clone()
 clone(true)
 ```
 其中的参数设置为`true`，就可以复制元素的所有事件处理。
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复制元素节点</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			img{border: 1px solid #CCCCCC;padding: 4px;margin: 5px;width: 500px;height: 500px;}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+				$("img").click(function () {
+					$(this).clone().appendTo("span");
+				})
+				
+			})
+		</script>
+	</head>
+	<body>
+		<span id="">
+			<img src="img/img01.jpg" title="封面"/>
+		</span>
+	</body>
+</html>
+```
 
+### 替换元素节点
+
+在jQuery中，如果要替换元素中的节点，可以使用`replaceWith()`和`replaceAll()`这两种方法，其语法格式如下：
+```jquery
+replaceWith(content)
+```
+该方法的功能是将所有选择的元素替换成指定的HTML或DOM元素，其中参数`content`为被所选择元素替换的内容。
+```jquery
+replaceAll(selector)
+```
+该方法的功能是将所有选择的元素替换成指定`selector`的元素，其中参数`selector`为需要被替换的元素。
 
