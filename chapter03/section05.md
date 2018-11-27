@@ -168,3 +168,9 @@ replaceAll(selector)
 </html>
 ```
 
+### 遍历元素
+
+在DOM元素操作中，有时需要对同一标记的全部元素进行统一操作。在传统的JavaScript中，先获取元素的总长度，然后以for循环语句递减总长度，访问其中的某个元素，代码相对复杂；而在jQuery中，可以直接使用`each()`方法实现遍历。其语法格式如下：
+```jquery
+each(callback)
+```
