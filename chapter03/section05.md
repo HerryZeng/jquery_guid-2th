@@ -190,3 +190,40 @@ empty()
 ```
 其功能为清空所选择的页面元素或所有的后代元素。
 
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>删除元素</title>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body {font-size: 15px;}
+			ul {width: 200px;}
+			ul li {list-style: none; padding: 0px; height: 23px;}
+			span {padding-left: 20px;}
+			.btn {border: 1px solid #666666; padding: 2px;margin: 2px;filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr=#ffffff,EndColorStr=#ECE9D8);}
+		</style>
+		<script type="text/javascript">
+			$(function () {
+				$("ul li:first").css("font-weight","bold");
+				$("#Button1").click(function () {
+					$("ul li").remove("li[title=t]")
+					$("ul li:eq(1)").remove()
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>学号</li>
+			<li title="t">1001</li>
+			<li>1002</li>
+			<li>1003</li>
+			<li style="text-align: center;padding-top: 5px;">
+				<input type="button" class="btn" id="Button1" value="删除" />
+			</li>
+		</ul>
+	</body>
+</html>
+```
